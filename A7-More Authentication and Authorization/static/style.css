@@ -1,0 +1,126 @@
+/*   ----- Imports  -----  */
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Roboto+Condensed&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    
+@import 'node_modules/modern-normalize/modern-normalize.css';
+    /* npm install modern-normalize
+      Resets elements for browser consistency.  
+      https://www.npmjs.com/package/modern-normalize
+    */         
+
+/*   ----- Variables  -----  */
+:root {
+--white: #ffffff;
+--black: #000000;
+--dark-red: #ad393d;
+--medium-red: #c74e52;
+--light-red: #ec7377;
+--gray: #464646;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+background-attachment: fixed;
+background-color: var(--black);
+background-position: top left;
+background-repeat: no-repeat;
+background-size: cover;
+margin: 0%;
+padding: 0%; 
+max-width: 100%;   
+color: var(--black);
+font-family: 'Roboto', sans-serif; /* Define with at least one font name and its related generic family name.*/
+line-height:1.2;
+}
+
+/*  ----- Page layout blocks -----  */
+header, footer {
+background-color: var(--black);
+color: var(--white);
+
+}
+
+header {
+text-align: center;
+padding: .5%;
+margin-top: 0%;
+margin-bottom: -3%;      
+}
+
+footer {
+text-align: center;
+padding: 1%;
+bottom: 0;  
+width: 100%;
+}
+
+main {
+background-color: var(--white);
+color: var(--black);
+margin: 5%;
+padding: 5%;
+}
+
+/* ----- Anchors ----- Text links */
+/*a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+*/
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+/* Style the MAIN nav bar */  
+/* Style the entire nav bar */
+.nav {
+display: flex;
+justify-content: center;
+background-color: var(--black);
+}
+/* Style the individual links inside the nav bar */
+.nav a {
+display: inline-block;
+padding: 5px 2vw;
+margin: 10px;
+margin-bottom: 10px;
+color: var(--white);
+font-size: calc(.4rem + 1vw);
+text-decoration: none;
+}
+/* Style the hover state of the individual links */
+.nav a:hover {
+border: 3px solid var(--white);
+color: var(--white);
+border-radius: 0;
+}
+
+/* Style the LOCAL nav bar */  
+.local-nav {
+display: flex;
+}
+.local-nav a {
+display: inline-block;
+padding: 0px;
+margin: 0px;
+color: var(--black);
+text-decoration: none;
+border-radius: 5px;
+}
+.local-nav a:hover {
+color: var(--medium-red);
+} 
+
+/*  -----  Typography  ----- */
+
+h1 {
+font-family: 'Julius Sans One', sans-serif;
+font-size: calc(.5rem + 2vw);
+} 
+h2, h3, h4, h5, h6 {
+font-family: 'Roboto Condensed', sans-serif;
+} 
+h2 {
+color: var(--dark-red);
+} 
+h3, h4, h5, h6 {
+color: var(--medium-red);
+} 

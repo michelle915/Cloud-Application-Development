@@ -1,0 +1,9 @@
+FROM python:3.10
+WORKDIR /usr/src/app
+COPY requirements.txt ./
+RUN pip3 install -r requirements.txt
+COPY . .
+ENV PORT=8000
+ENV GOOGLE_APPLICATION_CREDENTIALS='./a8-loyami-5b036dc7748e.json'
+EXPOSE ${PORT}
+CMD [ "python", "main.py" ]

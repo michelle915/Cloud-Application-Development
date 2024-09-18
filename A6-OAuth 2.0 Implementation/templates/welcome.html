@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Assignment 6: OAuth 2.0 Implementation</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header><h1>Assignment 6: OAuth 2.0 Implementation</h1></header>
+  <main>
+    <h2>Welcome!</h2>
+    <p>
+        This application demonstrates the OAuth 2.0 authorization protocol. In this demonstration, 
+        the OAuth 2.0 process is used to securely authenticate a user with their Google account and 
+        grant the application access to the user's profile information via the Google People API.
+    </p>
+    <p>
+        To see the demonstration, click the link below:
+    </p>
+    <a href="{{ auth_url }}">Sign in with Google</a>
+  </main>
+</body>
+</html>

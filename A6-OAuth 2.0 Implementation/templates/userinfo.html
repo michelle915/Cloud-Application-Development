@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>Assignment 6: OAuth 2.0 Implementation</title>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header><h1>Assignment 6: OAuth 2.0 Implementation</h1></header>
+  <main>
+    <h2>User information</h2>
+    <p>
+      This page displays the authenticated user's given name and family name after it has been retrieved from Google's People API through the OAuth 2.0 flow. 
+      This page also shows the unique state value used in the OAuth process. During the authorization process, the application generated and verified a random 
+      state parameter to ensure that each step in the flow was initiated by the same user.
+    </p>
+    {% if user_info %}
+        <p>Given Name: {{ user_info.names[0].givenName }}</p>
+        <p>Family Name: {{ user_info.names[0].familyName }}</p>
+    {% else %}
+        <p>No user information found.</p>
+    {% endif %}
+    <p>State: {{ state }}</p>
+  </main>
+</body>
+</html>
